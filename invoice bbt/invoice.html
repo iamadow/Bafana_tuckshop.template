@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#2B384C"
+    >
+
+    <title>Bafana Tuckshop | Invoice</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="app invoice-page">
+
+
+        <!-- TOP BAR -->
+
+        <div class="invoice-top">
+
+            <button
+                type="button"
+                class="back-btn"
+                onclick="window.location.href='index.html'"
+            >
+                ←
+            </button>
+
+            <span>
+                Invoice
+            </span>
+
+            <button
+                type="button"
+                class="print-btn"
+                onclick="window.print()"
+            >
+                Print
+            </button>
+
+        </div>
+
+
+
+        <!-- INVOICE CARD -->
+
+        <section class="invoice-card">
+
+
+            <!-- BUSINESS INFORMATION -->
+
+            <div class="invoice-heading">
+
+                <div>
+
+                    <div class="invoice-logo">
+                        BT
+                    </div>
+
+                    <h1>
+                        Bafana Tuckshop
+                    </h1>
+
+                    <p class="business-address">
+                        6700 Gold Avenue Street<br>
+                        Platinum Village<br>
+                        0299
+                    </p>
+
+                    <p class="invoice-label">
+                        Invoice
+                    </p>
+
+                </div>
+
+
+                <!-- INVOICE NUMBER + DATE -->
+
+                <div class="invoice-meta">
+
+                    <strong id="invoiceNumber">
+                        #INV-0000
+                    </strong>
+
+                    <span id="invoiceDate">
+                        14 Sep 2026
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DIVIDER -->
+
+            <div class="invoice-divider"></div>
+
+
+
+            <!-- ITEMS TABLE -->
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Item
+                            </th>
+
+                            <th>
+                                Qty
+                            </th>
+
+                            <th>
+                                Unit Price
+                            </th>
+
+                            <th>
+                                Total
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="invoiceItems">
+
+                        <!-- Items are added by JavaScript -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- TOTALS -->
+
+            <div class="invoice-total">
+
+
+                <div class="total-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="invoiceSubtotal">
+                        R0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="total-row grand-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="invoiceTotal">
+                        R0.00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- THANK YOU -->
+
+            <div class="thank-you">
+                Thank you for your business.
+            </div>
+
+
+        </section>
+
+
+
+        <!-- NEW INVOICE -->
+
+        <button
+            type="button"
+            class="new-invoice-btn"
+            onclick="newInvoice()"
+        >
+            + Create New Invoice
+        </button>
+
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

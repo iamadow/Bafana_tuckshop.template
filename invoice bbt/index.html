@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#2B384C">
+
+    <title>Bafana Tuckshop | Create Invoice</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- HEADER -->
+
+        <header class="app-header">
+
+            <div class="logo">
+                BT
+            </div>
+
+            <div>
+
+                <h1>Bafana Tuckshop</h1>
+
+                <p>Create your invoice</p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ADD ITEM -->
+
+        <section class="card">
+
+            <div class="section-title">
+
+                <h2>Add Item</h2>
+
+                <span id="itemCount">
+                    0 items added
+                </span>
+
+            </div>
+
+
+            <!-- ITEM NAME -->
+
+            <div class="input-group">
+
+                <label for="itemName">
+                    Item Name
+                </label>
+
+                <input
+                    type="text"
+                    id="itemName"
+                    placeholder="e.g. Coca-Cola 500ml"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- QUANTITY -->
+
+            <div class="input-group">
+
+                <label for="quantity">
+                    Quantity
+                </label>
+
+                <input
+                    type="number"
+                    id="quantity"
+                    value="1"
+                    min="1"
+                    step="1"
+                    inputmode="numeric"
+                >
+
+            </div>
+
+
+            <!-- UNIT PRICE -->
+
+            <div class="input-group">
+
+                <label for="unitPrice">
+                    Unit Price
+                </label>
+
+                <div class="input-wrapper has-currency">
+
+                    <span class="currency">
+                        R
+                    </span>
+
+                    <input
+                        type="number"
+                        id="unitPrice"
+                        placeholder="0.00"
+                        min="0"
+                        step="0.01"
+                        inputmode="decimal"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD ITEM BUTTON -->
+
+            <button
+                type="button"
+                class="add-btn"
+                id="addItemBtn"
+            >
+
+                <span>+</span>
+
+                Add Item
+
+            </button>
+
+        </section>
+
+
+        <!-- SUBTOTAL -->
+
+        <section class="summary-card">
+
+            <div>
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="subtotal">
+                    R0.00
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- GENERATE INVOICE -->
+
+        <button
+            type="button"
+            class="generate-btn"
+            id="generateBtn"
+        >
+
+            Generate Invoice
+
+            <span>→</span>
+
+        </button>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
